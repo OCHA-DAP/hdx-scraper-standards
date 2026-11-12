@@ -8,6 +8,7 @@ from datetime import datetime
 import requests
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
+from hdx.location.country import Country
 from hdx.utilities.retriever import Retrieve
 from slugify import slugify
 
@@ -73,6 +74,33 @@ class Pipeline:
             if re.search(r"\sdata(\s|$)", title, re.IGNORECASE):
                 title_issue = "Y"
             dataset_data["Title contains word 'date'"] = title_issue
+
+            # Check dataset title for dates or version numbers
+            title_issue = None
+            if re.search(r"\D(19|20)\d\d(\D|$)", title, re.IGNORECASE):
+                title_issue = "Y"
+            if re.search(r"\s(v(\s\d|\.\s\d|\d))|(version\s?\d)", title, re.IGNORECASE):
+                title_issue = "Y"
+            dataset_data["Title contains date or version number"] = title_issue
+
+            # Check dataset slug for country names instead of iso codes
+            name = slugify(dataset["name"]).replace("-", " ")
+            name_issue = None
+            dataset_iso = dataset.get_location_iso3s()
+            if len(dataset_iso) == 1 and dataset_iso[0].lower() not in name.split(" "):
+                iso, _ = Country.get_iso3_country_code_fuzzy(name)
+                if iso and iso == dataset_iso[0]:
+                    name_issue = "Y"
+            dataset_data["Name contains country name instead of iso3"] = name_issue
+
+            # Check resource file size <= 300 MB
+            resources = dataset.get_resources()
+            file_size_issue = None
+            for resource in resources:
+                size = resource.get("size")
+                if size and size > 314572800:
+                    file_size_issue = "Y"
+            dataset_data["Resource file size greater than 300 MB"] = file_size_issue
 
             checked_data.append(dataset_data)
         return checked_data
