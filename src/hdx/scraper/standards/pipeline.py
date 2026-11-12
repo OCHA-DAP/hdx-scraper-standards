@@ -45,15 +45,15 @@ class Pipeline:
             # Check if dataset is part of HDX pipeline
             updated_by_script = dataset["updated_by_script"]
             owner = "Unknown"
-            repo = None
+            repo = "Unknown"
             if (
                 "hdx scraper" in updated_by_script.lower()
                 or "hdxinternal" in updated_by_script.lower()
             ):
                 owner = "HDX"
                 repo, updated_by_script = self._get_repo(updated_by_script)
-            dataset_data["Pipeline owner"] = owner
             dataset_data["Updated by script"] = updated_by_script
+            dataset_data["Pipeline owner"] = owner
             dataset_data["GitHub repo"] = repo
 
             # Check update frequency
@@ -123,7 +123,7 @@ class Pipeline:
         response = requests.get(url, headers={"Accept": "application/vnd.github+json"})
         if response.status_code == 200:
             self._repos[repo_name] = url
-            repo = repo_name
+            repo = url
         else:
             repo = "Unknown"
             self._repos[repo_name] = repo
