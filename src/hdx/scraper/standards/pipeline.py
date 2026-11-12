@@ -2,53 +2,129 @@
 """Standards scraper"""
 
 import logging
+import re
+from datetime import datetime
 
-
+import requests
 from hdx.api.configuration import Configuration
 from hdx.data.dataset import Dataset
-from hdx.data.hdxobject import HDXError
 from hdx.utilities.retriever import Retrieve
+from slugify import slugify
 
 logger = logging.getLogger(__name__)
 
 
 class Pipeline:
-
-    def __init__(
-        self, configuration: Configuration, retriever: Retrieve, tempdir: str
-    ):
+    def __init__(self, configuration: Configuration, retriever: Retrieve, tempdir: str):
         self._configuration = configuration
         self._retriever = retriever
         self._tempdir = tempdir
+        self._repos = {}
 
+    @staticmethod
+    def get_datasets() -> list[Dataset]:
+        logger.info("Getting datasets")
+        datasets = Dataset.get_all_datasets(fq="archived:false AND private:false")
+        scripted_datasets = []
+        for dataset in datasets:
+            updated_by_script = dataset.get("updated_by_script")
+            if not updated_by_script:
+                continue
+            scripted_datasets.append(dataset)
+        return scripted_datasets
 
-    def generate_dataset(self) -> Dataset | None:
+    def check_datasets(self, datasets_to_check: list[Dataset]) -> list[dict]:
+        logger.info("Checking datasets")
+        checked_data = []
+        for dataset in datasets_to_check:
+            dataset_data = {
+                "name": dataset["name"],
+                "title": dataset["title"],
+            }
 
-        # To be generated
-        dataset_name = None
-        dataset_title = None
-        dataset_time_period = None
-        dataset_tags = None
-        dataset_country_iso3 = None
+            # Check if dataset is part of HDX pipeline
+            updated_by_script = dataset["updated_by_script"]
+            owner = "Unknown"
+            repo = None
+            if (
+                "hdx scraper" in updated_by_script.lower()
+                or "hdxinternal" in updated_by_script.lower()
+            ):
+                owner = "HDX"
+                repo, updated_by_script = self._get_repo(updated_by_script)
+            dataset_data["Pipeline owner"] = owner
+            dataset_data["Updated by script"] = updated_by_script
+            dataset_data["GitHub repo"] = repo
 
-        # Dataset info
+            # Check update frequency
+            update_frequency_issue = None
+            update_frequency = dataset.get_expected_update_frequency()
+            if not update_frequency:
+                update_frequency_issue = "Missing"
+            elif update_frequency in ["Live", "As needed"]:
+                update_frequency_issue = update_frequency
+            dataset_data["Update frequency is missing/As needed/Live"] = (
+                update_frequency_issue
+            )
+
+            # Check dataset title for "data"
+            title = dataset["title"]
+            title_issue = None
+            if re.search(r"\sdata(\s|$)", title, re.IGNORECASE):
+                title_issue = "Y"
+            dataset_data["Title contains word 'date'"] = title_issue
+
+            checked_data.append(dataset_data)
+        return checked_data
+
+    def generate_dataset(self, data: list[dict], now: datetime) -> Dataset | None:
+        logger.info("Generating dataset")
         dataset = Dataset(
             {
-                "name": dataset_name,
-                "title": dataset_title,
+                "name": "pipeline-guidelines",
+                "title": "HDX Internal: Scripted datasets and pipeline guidelines",
             }
         )
 
-        dataset.set_time_period(dataset_time_period)
-        dataset.add_tags(dataset_tags)
-        # Only if needed
-        dataset.set_subnational(True)
-        try:
-            dataset.add_country_location(dataset_country_iso3)
-        except HDXError:
-            logger.error(f"Couldn't find country {dataset_country_iso3}, skipping")
-            return
+        dataset.set_time_period(now)
+        dataset.add_other_location("world")
+        dataset.add_tag("survey")
 
-        # Add resources here
+        dataset.generate_resource(
+            folder=self._tempdir,
+            filename="dataset_issues.csv",
+            rows=data,
+            headers=list(data[0].keys()),
+            resourcedata={
+                "name": "dataset_issues.csv",
+                "description": "CSV of datasets and potential issues",
+            },
+            encoding="utf-8-sig",
+        )
 
         return dataset
+
+    def _get_repo(self, updated_by_script: str) -> (str, str):
+        parts = updated_by_script.split(" (")
+        if len(parts) > 1:
+            parts = parts[:-1]
+        updated_by_script = " (".join(parts)
+        parts = updated_by_script.split(": ")
+        if len(parts) > 1:
+            parts = parts[1:]
+        script_name = ": ".join(parts)
+        repo_name = self._configuration["repos"].get(
+            script_name, slugify(f"hdx-scraper-{script_name}")
+        )
+        if repo_name in self._repos:
+            repo = self._repos[repo_name]
+            return repo, updated_by_script
+        url = f"{self._configuration['base_github']}/{repo_name}"
+        response = requests.get(url, headers={"Accept": "application/vnd.github+json"})
+        if response.status_code == 200:
+            self._repos[repo_name] = url
+            repo = repo_name
+        else:
+            repo = "Unknown"
+            self._repos[repo_name] = repo
+        return repo, updated_by_script

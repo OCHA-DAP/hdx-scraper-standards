@@ -1,1 +1,21 @@
-# Collector specific configuration
+# Only listing repos that do not follow the pattern "hdx-scraper-slugify(scrapername)"
+base_github: "https://github.com/OCHA-DAP"
+
+repos:
+  WFP Market Monitoring: "hdx-wfp-market-monitoring"
+  HDXINTERNAL_NASA_FIRMS_AdHoc - nasa-firms per-sensor rollout: "hdx-scraper-nasa-firms"
+  WFP Food Prices: "hdx-scraper-wfp-foodprices"
+  IOM Missing Migrants: "hdx-scraper-iom-missingmigrants"
+  Operational Presence: "hdx-scraper-operationalpresence"
+  FloodScan: "hdx-floodscan"
+  MIMU GeoNode: "hdx-scraper-mimu"
+  ASAP Hotspots: "hdx-scraper-asap"
+  World Bank: "hdx-scraper-worldbank"
+  Ebola Bundibugyo: "hdx-scraper-ebola_bundibugyo"
+  Who's On First: "hdx-scraper-whosonfirst"
+  CLEAR Global: "hdx-scraper-clearglobal"
+  CHC UCSB: "hdx-scraper-chc_ucsb"
+  Climate TRACE: "hdx-scraper-climatetrace"
+  Global Logistics: "hdx-scraper-globallogistics"
+  HPC HNO: "hdx-scraper-hno"
+  HDX Signals: "hdx-signals-alerts"

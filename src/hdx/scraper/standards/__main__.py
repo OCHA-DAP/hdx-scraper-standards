@@ -6,19 +6,21 @@ script then creates in HDX.
 """
 
 import logging
-from os.path import dirname, expanduser, join
+from os.path import expanduser, join
 
 from hdx.api.configuration import Configuration
 from hdx.data.user import User
 from hdx.facades.infer_arguments import facade
-from hdx.scraper.standards._version import __version__
-from hdx.scraper.standards.pipeline import Pipeline
+from hdx.utilities.dateparse import now_utc
 from hdx.utilities.downloader import Download
 from hdx.utilities.path import (
     script_dir_plus_file,
     wheretostart_tempdir_batch,
 )
 from hdx.utilities.retriever import Retrieve
+
+from hdx.scraper.standards._version import __version__
+from hdx.scraper.standards.pipeline import Pipeline
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +44,7 @@ def main(
     """
     logger.info(f"##### {_LOOKUP} version {__version__} ####")
     configuration = Configuration.read()
-    User.check_current_user_write_access("")
+    User.check_current_user_write_access("hdx")
 
     with wheretostart_tempdir_batch(folder=_LOOKUP) as info:
         tempdir = info["folder"]
@@ -56,10 +58,9 @@ def main(
                 use_saved=use_saved,
             )
             pipeline = Pipeline(configuration, retriever, tempdir)
-            #
-            # Steps to generate dataset
-            #
-            dataset = pipeline.generate_dataset()
+            datasets_to_check = pipeline.get_datasets()
+            data = pipeline.check_datasets(datasets_to_check)
+            dataset = pipeline.generate_dataset(data, now_utc())
             if dataset:
                 dataset.update_from_yaml(
                     script_dir_plus_file(
@@ -77,7 +78,6 @@ def main(
 if __name__ == "__main__":
     facade(
         main,
-#        hdx_site="dev",
         user_agent_config_yaml=join(expanduser("~"), ".useragents.yaml"),
         user_agent_lookup=_LOOKUP,
         project_config_yaml=script_dir_plus_file(

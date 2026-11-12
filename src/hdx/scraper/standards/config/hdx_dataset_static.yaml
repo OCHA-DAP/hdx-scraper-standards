@@ -1,10 +1,9 @@
 license_id: cc-by
-methodology: Other
-caveats: 
-dataset_source: 
+methodology: Registry
+dataset_source: HDX
 package_creator: HDX Data Systems Team
-private: False
-maintainer: 
-owner_org:  
-data_update_frequency: 
-notes: 
+private: True
+maintainer: aa13de36-28c5-47a7-8d0b-6d7c754ba8c8
+owner_org: hdx
+data_update_frequency: 7
+notes: This dataset checks scripted datasets for potential issues. Each column corresponds to an aspect that does not conform to the pipeline guidelines.
