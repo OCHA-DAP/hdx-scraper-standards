@@ -1,4 +1,4 @@
-﻿Updated by script,Pipeline owner,GitHub repo,Number of datasets,Update frequency is missing/As needed/Live,Title contains word 'date',Title contains date or version number,Name contains country name instead of iso3,Resource file size greater than 300 MB
+﻿Updated by script,Pipeline owner,GitHub repo,Number of datasets,Update frequency is missing/As needed/Live,Title contains word 'data',Title contains date or version number,Name contains country name instead of iso3,Resource file size greater than 300 MB
 HDX Scraper: Gcf,HDX,https://github.com/OCHA-DAP/hdx-scraper-gcf,1,0,0,0,0,0
 HDX Scraper: World Bank,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank,75,0,0,0,0,0
 HDXPythonLibrary/6.6.7-osm-country-exports/0.1,Unknown,Unknown,38,3,0,0,0,1

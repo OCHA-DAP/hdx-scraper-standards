@@ -83,10 +83,10 @@ class Pipeline:
             title_issue = None
             if re.search(r"\sdata(\s|$)", title, re.IGNORECASE):
                 title_issue = "Y"
-            dataset_data["Title contains word 'date'"] = title_issue
+            dataset_data["Title contains word 'data'"] = title_issue
             checked_pipelines[updated_by_script] = self._add_to_pipeline_dict(
                 checked_pipelines[updated_by_script],
-                "Title contains word 'date'",
+                "Title contains word 'data'",
                 title_issue,
             )
 

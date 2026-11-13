@@ -1,4 +1,4 @@
-﻿name,title,Updated by script,Pipeline owner,GitHub repo,Update frequency is missing/As needed/Live,Title contains word 'date',Title contains date or version number,Name contains country name instead of iso3,Resource file size greater than 300 MB
+﻿name,title,Updated by script,Pipeline owner,GitHub repo,Update frequency is missing/As needed/Live,Title contains word 'data',Title contains date or version number,Name contains country name instead of iso3,Resource file size greater than 300 MB
 nicaragua-gcf-funded-activities,Nicaragua - GCF Funded Activities,HDX Scraper: Gcf,HDX,https://github.com/OCHA-DAP/hdx-scraper-gcf,,,,,
 world-bank-millenium-development-goals-indicators-for-greece,Greece - Millenium development goals,HDX Scraper: World Bank,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank,,,,,
 world-bank-education-indicators-for-palau,Palau - Education,HDX Scraper: World Bank,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank,,,,,
