@@ -1,62 +1,62 @@
-﻿Updated by script,Pipeline owner,GitHub repo,Number of datasets,Update frequency is missing/As needed/Live,Title contains word 'data',Title contains date or version number,Name contains country name instead of iso3,Resource file size greater than 300 MB
-HDX Scraper: Gcf,HDX,https://github.com/OCHA-DAP/hdx-scraper-gcf,1,0,0,0,0,0
-HDX Scraper: World Bank,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank,75,0,0,0,0,0
-HDXPythonLibrary/6.6.7-osm-country-exports/0.1,Unknown,Unknown,38,3,0,0,0,1
-HDXPythonLibrary/6.6.9-Healthsites.io,Unknown,Unknown,8,0,0,0,0,0
-GeoBoundaries,Unknown,Unknown,4,4,0,0,0,0
-HDX Scraper: OurAirports,HDX,Unknown,3,3,0,0,0,0
-HDX Scraper: ADB,HDX,https://github.com/OCHA-DAP/hdx-scraper-adb,2,0,0,0,0,0
-HDX Scraper: Climate TRACE,HDX,https://github.com/OCHA-DAP/hdx-scraper-climatetrace,4,0,0,0,0,0
-HDX Scraper: Who's On First,HDX,https://github.com/OCHA-DAP/hdx-scraper-whosonfirst,4,0,0,0,0,0
-HDX Scraper: HPC HNO,HDX,https://github.com/OCHA-DAP/hdx-scraper-hno,1,0,0,0,0,0
-HDX Scraper: Hdro,HDX,https://github.com/OCHA-DAP/hdx-scraper-hdro,8,0,0,0,0,0
-HDX Scraper: Glide,HDX,https://github.com/OCHA-DAP/hdx-scraper-glide,5,5,0,0,0,0
-HDX Scraper: FAOStat,HDX,https://github.com/OCHA-DAP/hdx-scraper-faostat,4,0,0,0,0,0
-HDXPythonLibrary/6.6.5-HeiGIT,Unknown,Unknown,5,0,5,0,0,1
-HDX Scraper: HRP Projects,HDX,https://github.com/OCHA-DAP/hdx-scraper-hrp-projects,4,0,0,0,0,0
-HDX Scraper: UNEP,HDX,https://github.com/OCHA-DAP/hdx-scraper-unep,6,0,0,0,0,0
-HDX Scraper: IPC,HDX,https://github.com/OCHA-DAP/hdx-scraper-ipc,2,2,2,0,0,0
-HDX Scraper: WHO,HDX,https://github.com/OCHA-DAP/hdx-scraper-who,4,0,0,0,0,0
-HDX Scraper: UNHCR microdata,HDX,https://github.com/OCHA-DAP/hdx-scraper-unhcr-microdata,21,0,0,21,0,0
-HDX Scraper: copernicus,HDX,https://github.com/OCHA-DAP/hdx-scraper-copernicus,7,0,0,0,0,0
-HDX Scraper: Views,HDX,https://github.com/OCHA-DAP/hdx-scraper-views,10,0,0,0,0,0
-HDX Scraper: COD-AB Country,HDX,https://github.com/OCHA-DAP/hdx-scraper-cod-ab-country,2,0,0,0,0,0
-HDX Scraper: UCDP,HDX,https://github.com/OCHA-DAP/hdx-scraper-ucdp,2,0,2,0,0,0
-HDX Scraper: WorldPop add tags,HDX,Unknown,6,0,0,6,0,2
-HDXPythonLibrary/6.6.8-unicefdata,Unknown,Unknown,3,3,0,0,0,0
-HDXINTERNAL:HDXPythonLibrary/6.2.0-CODs,HDX,Unknown,3,1,0,0,0,0
-HDXPythonLibrary/6.0.4-Kontur HDX Loader,Unknown,Unknown,4,4,0,0,0,0
-HDXPythonLibrary/6.7.0-osm-country-exports/0.1,Unknown,Unknown,7,7,0,0,0,2
-HDX Scraper: CERF,HDX,https://github.com/OCHA-DAP/hdx-scraper-cerf,3,0,0,0,0,0
-hdx:HDXPythonLibrary/6.3.1-hdx_cli_toolkit_cjh,Unknown,Unknown,6,2,3,0,0,0
-HDX Scraper: UNESCO,HDX,https://github.com/OCHA-DAP/hdx-scraper-unesco,3,0,0,0,0,0
-hdx:HDXPythonLibrary/6.3.2-Standardisation,Unknown,Unknown,2,0,0,0,0,0
-HDX Scraper: WFP Food Prices,HDX,https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices,5,0,0,0,0,0
-HDXPythonLibrary/6.5.2-HeiGIT_Dagster_Bot,Unknown,Unknown,3,0,0,0,0,1
-HDXPythonLibrary/6.1.1-wfp,Unknown,Unknown,1,0,0,1,0,0
-HDXPythonLibrary/6.4.5-hdc-lambda,Unknown,Unknown,7,0,0,0,0,0
-HDX Scraper: Dcc,HDX,https://github.com/OCHA-DAP/hdx-scraper-dcc,2,0,0,0,0,1
-HDXPythonLibrary/6.6.9-The Philippine Space Agency,Unknown,Unknown,1,1,0,1,0,0
-HDXPythonLibrary/6.6.8-UNHCR_POPULATION,Unknown,Unknown,2,0,2,0,0,0
-HDX Scraper: IBTrACS,HDX,https://github.com/OCHA-DAP/hdx-scraper-ibtracs,7,7,0,0,0,0
-HDXINTERNAL:HDXPythonLibrary/6.2.1-CODs,HDX,Unknown,4,1,0,0,0,0
-HDX Scraper: Ti,HDX,https://github.com/OCHA-DAP/hdx-scraper-ti,1,0,0,0,0,0
-HDX Scraper: OPHI,HDX,https://github.com/OCHA-DAP/hdx-scraper-ophi,1,1,0,0,0,0
-HDXPythonLibrary/6.6.5-updating_acled_hdx_files,Unknown,Unknown,3,0,0,0,0,0
-HDXPythonLibrary/6.1.3-Kontur HDX Loader,Unknown,Unknown,3,3,0,0,0,0
-HDXPythonLibrary/6.6.8-GaiaHdxVizUpdater,Unknown,Unknown,1,0,0,0,0,0
-HDX Scraper: Portwatch,HDX,https://github.com/OCHA-DAP/hdx-scraper-portwatch,3,0,3,0,0,0
-HDX Scraper: MIMU GeoNode,HDX,https://github.com/OCHA-DAP/hdx-scraper-mimu,1,1,0,1,0,0
-HDX Scraper: IDMC GIDD,HDX,https://github.com/OCHA-DAP/hdx-scraper-idmc-gidd,3,0,0,0,0,0
-HDX Scraper: FTS,HDX,https://github.com/OCHA-DAP/hdx-scraper-fts,4,0,4,0,0,0
-HDX Scraper: UNHabitat,HDX,https://github.com/OCHA-DAP/hdx-scraper-unhabitat,2,0,0,0,0,0
-HDX Scraper: HAPI Datasets,HDX,Unknown,1,0,1,0,0,0
-HDX Scraper: ADPC GEM,HDX,https://github.com/OCHA-DAP/hdx-scraper-adpc-gem,1,1,0,0,0,0
-HDX Scraper: Ctrees,HDX,https://github.com/OCHA-DAP/hdx-scraper-ctrees,1,0,0,0,0,0
-HDX Scraper: Worldbank_rtp,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank-rtp,1,0,0,0,0,0
-HDX Scraper: IFRC,HDX,https://github.com/OCHA-DAP/hdx-scraper-ifrc,2,0,0,0,0,0
-HDX Scraper: DHS,HDX,https://github.com/OCHA-DAP/hdx-scraper-dhs,1,0,1,0,0,0
-HDXPythonLibrary/5.4.1-test,Unknown,Unknown,1,0,0,0,0,0
-HDX Scraper: WFP ADAM,HDX,https://github.com/OCHA-DAP/hdx-scraper-wfp-adam,1,0,0,1,0,0
-HDX Scraper: ICPAC,HDX,https://github.com/OCHA-DAP/hdx-scraper-icpac,1,1,0,0,0,0
-HDX Scraper: iati,HDX,https://github.com/OCHA-DAP/hdx-scraper-iati,1,1,0,0,0,0
+﻿Updated by script,Pipeline owner,GitHub repo,Number of datasets,Update frequency is missing/As needed/Live,Title contains word 'data',Title contains date or version number,Name contains country name instead of iso3,Resource name contains country name instead of iso3,Resource file size greater than 300 MB
+HDX Scraper: Gcf,HDX,https://github.com/OCHA-DAP/hdx-scraper-gcf,1,0,0,0,0,0,0
+HDX Scraper: World Bank,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank,75,0,0,0,0,75,0
+HDXPythonLibrary/6.6.7-osm-country-exports/0.1,Unknown,Unknown,38,3,0,0,0,0,1
+HDXPythonLibrary/6.6.9-Healthsites.io,Unknown,Unknown,8,0,0,0,0,8,0
+GeoBoundaries,Unknown,Unknown,4,4,0,0,0,0,0
+HDX Scraper: OurAirports,HDX,Unknown,3,3,0,0,0,3,0
+HDX Scraper: ADB,HDX,https://github.com/OCHA-DAP/hdx-scraper-adb,2,0,0,0,0,0,0
+HDX Scraper: Climate TRACE,HDX,https://github.com/OCHA-DAP/hdx-scraper-climatetrace,4,0,0,0,0,0,0
+HDX Scraper: Who's On First,HDX,https://github.com/OCHA-DAP/hdx-scraper-whosonfirst,4,0,0,0,0,0,0
+HDX Scraper: HPC HNO,HDX,https://github.com/OCHA-DAP/hdx-scraper-hno,1,0,0,0,0,0,0
+HDX Scraper: Hdro,HDX,https://github.com/OCHA-DAP/hdx-scraper-hdro,8,0,0,0,0,8,0
+HDX Scraper: Glide,HDX,https://github.com/OCHA-DAP/hdx-scraper-glide,5,5,0,0,0,0,0
+HDX Scraper: FAOStat,HDX,https://github.com/OCHA-DAP/hdx-scraper-faostat,4,0,0,0,0,0,0
+HDXPythonLibrary/6.6.5-HeiGIT,Unknown,Unknown,5,0,5,0,0,5,1
+HDX Scraper: HRP Projects,HDX,https://github.com/OCHA-DAP/hdx-scraper-hrp-projects,4,0,0,0,0,1,0
+HDX Scraper: UNEP,HDX,https://github.com/OCHA-DAP/hdx-scraper-unep,6,0,0,0,0,0,0
+HDX Scraper: IPC,HDX,https://github.com/OCHA-DAP/hdx-scraper-ipc,2,2,2,0,0,0,0
+HDX Scraper: WHO,HDX,https://github.com/OCHA-DAP/hdx-scraper-who,4,0,0,0,0,4,0
+HDX Scraper: UNHCR microdata,HDX,https://github.com/OCHA-DAP/hdx-scraper-unhcr-microdata,21,0,0,21,0,21,0
+HDX Scraper: copernicus,HDX,https://github.com/OCHA-DAP/hdx-scraper-copernicus,7,0,0,0,0,0,0
+HDX Scraper: Views,HDX,https://github.com/OCHA-DAP/hdx-scraper-views,10,0,0,0,0,0,0
+HDX Scraper: COD-AB Country,HDX,https://github.com/OCHA-DAP/hdx-scraper-cod-ab-country,2,0,0,0,0,0,0
+HDX Scraper: UCDP,HDX,https://github.com/OCHA-DAP/hdx-scraper-ucdp,2,0,2,0,0,2,0
+HDX Scraper: WorldPop add tags,HDX,Unknown,6,0,0,6,0,0,2
+HDXPythonLibrary/6.6.8-unicefdata,Unknown,Unknown,3,3,0,0,0,0,0
+HDXINTERNAL:HDXPythonLibrary/6.2.0-CODs,HDX,Unknown,3,1,0,0,0,1,0
+HDXPythonLibrary/6.0.4-Kontur HDX Loader,Unknown,Unknown,4,4,0,0,0,0,0
+HDXPythonLibrary/6.7.0-osm-country-exports/0.1,Unknown,Unknown,7,7,0,0,0,0,2
+HDX Scraper: CERF,HDX,https://github.com/OCHA-DAP/hdx-scraper-cerf,3,0,0,0,0,0,0
+hdx:HDXPythonLibrary/6.3.1-hdx_cli_toolkit_cjh,Unknown,Unknown,6,2,3,0,0,4,0
+HDX Scraper: UNESCO,HDX,https://github.com/OCHA-DAP/hdx-scraper-unesco,3,0,0,0,0,0,0
+hdx:HDXPythonLibrary/6.3.2-Standardisation,Unknown,Unknown,2,0,0,0,0,0,0
+HDX Scraper: WFP Food Prices,HDX,https://github.com/OCHA-DAP/hdx-scraper-wfp-foodprices,5,0,0,0,0,4,0
+HDXPythonLibrary/6.5.2-HeiGIT_Dagster_Bot,Unknown,Unknown,3,0,0,0,0,0,1
+HDXPythonLibrary/6.1.1-wfp,Unknown,Unknown,1,0,0,1,0,1,0
+HDXPythonLibrary/6.4.5-hdc-lambda,Unknown,Unknown,7,0,0,0,0,0,0
+HDX Scraper: Dcc,HDX,https://github.com/OCHA-DAP/hdx-scraper-dcc,2,0,0,0,0,2,1
+HDXPythonLibrary/6.6.9-The Philippine Space Agency,Unknown,Unknown,1,1,0,1,0,0,0
+HDXPythonLibrary/6.6.8-UNHCR_POPULATION,Unknown,Unknown,2,0,2,0,0,2,0
+HDX Scraper: IBTrACS,HDX,https://github.com/OCHA-DAP/hdx-scraper-ibtracs,7,7,0,0,0,0,0
+HDXINTERNAL:HDXPythonLibrary/6.2.1-CODs,HDX,Unknown,4,1,0,0,0,2,0
+HDX Scraper: Ti,HDX,https://github.com/OCHA-DAP/hdx-scraper-ti,1,0,0,0,0,0,0
+HDX Scraper: OPHI,HDX,https://github.com/OCHA-DAP/hdx-scraper-ophi,1,1,0,0,0,1,0
+HDXPythonLibrary/6.6.5-updating_acled_hdx_files,Unknown,Unknown,3,0,0,0,0,3,0
+HDXPythonLibrary/6.1.3-Kontur HDX Loader,Unknown,Unknown,3,3,0,0,0,0,0
+HDXPythonLibrary/6.6.8-GaiaHdxVizUpdater,Unknown,Unknown,1,0,0,0,0,0,0
+HDX Scraper: Portwatch,HDX,https://github.com/OCHA-DAP/hdx-scraper-portwatch,3,0,3,0,0,3,0
+HDX Scraper: MIMU GeoNode,HDX,https://github.com/OCHA-DAP/hdx-scraper-mimu,1,1,0,1,0,0,0
+HDX Scraper: IDMC GIDD,HDX,https://github.com/OCHA-DAP/hdx-scraper-idmc-gidd,3,0,0,0,0,0,0
+HDX Scraper: FTS,HDX,https://github.com/OCHA-DAP/hdx-scraper-fts,4,0,4,0,0,0,0
+HDX Scraper: UNHabitat,HDX,https://github.com/OCHA-DAP/hdx-scraper-unhabitat,2,0,0,0,0,0,0
+HDX Scraper: HAPI Datasets,HDX,Unknown,1,0,1,0,0,1,0
+HDX Scraper: ADPC GEM,HDX,https://github.com/OCHA-DAP/hdx-scraper-adpc-gem,1,1,0,0,0,0,0
+HDX Scraper: Ctrees,HDX,https://github.com/OCHA-DAP/hdx-scraper-ctrees,1,0,0,0,0,0,0
+HDX Scraper: Worldbank_rtp,HDX,https://github.com/OCHA-DAP/hdx-scraper-worldbank-rtp,1,0,0,0,0,1,0
+HDX Scraper: IFRC,HDX,https://github.com/OCHA-DAP/hdx-scraper-ifrc,2,0,0,0,0,2,0
+HDX Scraper: DHS,HDX,https://github.com/OCHA-DAP/hdx-scraper-dhs,1,0,1,0,0,1,0
+HDXPythonLibrary/5.4.1-test,Unknown,Unknown,1,0,0,0,0,1,0
+HDX Scraper: WFP ADAM,HDX,https://github.com/OCHA-DAP/hdx-scraper-wfp-adam,1,0,0,1,0,0,0
+HDX Scraper: ICPAC,HDX,https://github.com/OCHA-DAP/hdx-scraper-icpac,1,1,0,0,0,1,0
+HDX Scraper: iati,HDX,https://github.com/OCHA-DAP/hdx-scraper-iati,1,1,0,0,0,1,0

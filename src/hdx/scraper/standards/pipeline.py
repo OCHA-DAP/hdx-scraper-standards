@@ -118,6 +118,30 @@ class Pipeline:
                 name_issue,
             )
 
+            # Check resource names for country names instead of iso codes
+            name_issue = None
+            resource_names = [r["name"] for r in dataset.get_resources()]
+            for resource_name in resource_names:
+                if name_issue:
+                    break
+                iso, _ = Country.get_iso3_country_code_fuzzy(resource_name)
+                if not iso:
+                    continue
+                if not re.search(
+                    r"(^|[^a-z])" + iso.lower() + r"[^a-z]",
+                    resource_name,
+                    re.IGNORECASE,
+                ):
+                    name_issue = "Y"
+            dataset_data["Resource name contains country name instead of iso3"] = (
+                name_issue
+            )
+            checked_pipelines[updated_by_script] = self._add_to_pipeline_dict(
+                checked_pipelines[updated_by_script],
+                "Resource name contains country name instead of iso3",
+                name_issue,
+            )
+
             # Check resource file size <= 300 MB
             resources = dataset.get_resources()
             file_size_issue = None
