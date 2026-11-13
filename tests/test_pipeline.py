@@ -33,8 +33,12 @@ class TestPipeline:
             datasets_to_check = pipeline.get_datasets()
             assert len(datasets_to_check) == 322
 
-            data = pipeline.check_datasets(datasets_to_check)
-            dataset = pipeline.generate_dataset(data, datetime(2026, 11, 12))
+            checked_datasets, checked_pipelines = pipeline.check_datasets(
+                datasets_to_check
+            )
+            dataset = pipeline.generate_dataset(
+                checked_datasets, checked_pipelines, datetime(2026, 11, 12)
+            )
             dataset.update_from_yaml(path=join(config_dir, "hdx_dataset_static.yaml"))
             assert dataset == {
                 "name": "pipeline-guidelines",
@@ -59,13 +63,25 @@ class TestPipeline:
             }
 
             resources = dataset.get_resources()
-            assert resources[0] == {
-                "name": "dataset_issues.csv",
-                "description": "CSV of datasets and potential issues",
-                "format": "csv",
-            }
+            assert resources == [
+                {
+                    "name": "dataset_issues.csv",
+                    "description": "CSV of datasets and potential issues",
+                    "format": "csv",
+                },
+                {
+                    "name": "pipeline_issues.csv",
+                    "description": "CSV of pipeline potential issues",
+                    "format": "csv",
+                },
+            ]
 
             assert_files_same(
                 join(fixtures_dir, "dataset_issues.csv"),
                 join(tempdir, "dataset_issues.csv"),
+            )
+
+            assert_files_same(
+                join(fixtures_dir, "pipeline_issues.csv"),
+                join(tempdir, "pipeline_issues.csv"),
             )

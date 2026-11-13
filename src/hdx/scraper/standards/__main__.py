@@ -59,8 +59,12 @@ def main(
             )
             pipeline = Pipeline(configuration, retriever, tempdir)
             datasets_to_check = pipeline.get_datasets()
-            data = pipeline.check_datasets(datasets_to_check)
-            dataset = pipeline.generate_dataset(data, now_utc())
+            checked_datasets, checked_pipelines = pipeline.check_datasets(
+                datasets_to_check
+            )
+            dataset = pipeline.generate_dataset(
+                checked_datasets, checked_pipelines, now_utc()
+            )
             if dataset:
                 dataset.update_from_yaml(
                     script_dir_plus_file(
