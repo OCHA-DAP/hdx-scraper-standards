@@ -41,9 +41,11 @@ class Pipeline:
         checked_datasets = []
         checked_pipelines = {}
         for dataset in datasets_to_check:
+            dataset_org = dataset.get_organization()["name"]
             dataset_data = {
-                "name": dataset["name"],
-                "title": dataset["title"],
+                "Name": dataset["name"],
+                "Title": dataset["title"],
+                "Org": dataset_org,
             }
 
             # Check if dataset is part of HDX pipeline
@@ -55,6 +57,7 @@ class Pipeline:
             if updated_by_script not in checked_pipelines:
                 checked_pipelines[updated_by_script] = {
                     "Updated by script": updated_by_script,
+                    "Org": dataset_org,
                     "Pipeline owner": owner,
                     "GitHub repo": repo,
                     "Number of datasets": 1,
