@@ -103,11 +103,34 @@ class Pipeline:
                 title_issue,
             )
 
+            # Check dataset title starts with country name
+            dataset_iso = dataset.get_location_iso3s()
+            title_issue = None
+            if len(dataset_iso) == 1:
+                if dataset_iso[0].lower() == "world":
+                    if not title.lower().startswith(
+                        "world"
+                    ) and not title.lower().startswith("global"):
+                        title_issue = "Y"
+                else:
+                    country_name = dataset.get_location_names()[0]
+                    if not title.lower().startswith(country_name.lower()):
+                        title_issue = "Y"
+            dataset_data["Title doesn't start with country/world"] = title_issue
+            checked_pipelines[updated_by_script] = self._add_to_pipeline_dict(
+                checked_pipelines[updated_by_script],
+                "Title doesn't start with country/world",
+                title_issue,
+            )
+
             # Check dataset slug for country names instead of iso codes
             name = slugify(dataset["name"]).replace("-", " ")
             name_issue = None
-            dataset_iso = dataset.get_location_iso3s()
-            if len(dataset_iso) == 1 and dataset_iso[0].lower() not in name.split(" "):
+            if (
+                len(dataset_iso) == 1
+                and dataset_iso[0].lower() != "world"
+                and dataset_iso[0].lower() not in name.split(" ")
+            ):
                 iso, _ = Country.get_iso3_country_code_fuzzy(name)
                 if iso and iso == dataset_iso[0]:
                     name_issue = "Y"

@@ -2,7 +2,6 @@ from os.path import join
 
 import pytest
 from hdx.api.configuration import Configuration
-from hdx.api.locations import Locations
 from hdx.data.dataset import Dataset
 from hdx.data.vocabulary import Vocabulary
 from hdx.location.country import Country
@@ -48,13 +47,7 @@ def configuration(config_dir):
         hdx_site="prod",
         project_config_yaml=join(config_dir, "project_configuration.yaml"),
     )
-    # Change locations below to match those needed in tests
-    Locations.set_validlocations(
-        [
-            {"name": "world", "title": "World"},
-        ]
-    )
-    Country.countriesdata(False)
+    Country.countriesdata(include_unofficial=True)
     Vocabulary._approved_vocabulary = {
         "tags": [
             {"name": tag}
