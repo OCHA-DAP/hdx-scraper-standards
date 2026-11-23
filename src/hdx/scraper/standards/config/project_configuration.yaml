@@ -19,3 +19,6 @@ repos:
   Global Logistics: "hdx-scraper-globallogistics"
   HPC HNO: "hdx-scraper-hno"
   HDX Signals: "hdx-signals-alerts"
+  HAPI Datasets: "hdx-hapi-datasets"
+  WFP Food Security: "hdx-scraper-wfp-foodsecurity"
+  OurAirports: "ourairports-hdx"

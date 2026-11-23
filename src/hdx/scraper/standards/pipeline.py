@@ -184,6 +184,12 @@ class Pipeline:
 
             checked_datasets.append(dataset_data)
         checked_pipelines = list(checked_pipelines.values())
+        checked_pipelines = sorted(
+            checked_pipelines, key=lambda x: x["Updated by script"]
+        )
+        checked_datasets = sorted(
+            checked_datasets, key=lambda x: (x["Updated by script"], x["Name"])
+        )
         return checked_datasets, checked_pipelines
 
     def generate_dataset(
