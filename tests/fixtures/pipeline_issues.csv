@@ -12,7 +12,7 @@ HDX Scraper: FAOStat,fao,HDX,https://github.com/OCHA-DAP/hdx-scraper-faostat,4,0
 HDX Scraper: FTS,ocha-fts,HDX,https://github.com/OCHA-DAP/hdx-scraper-fts,4,0,4,0,0,0,0,0
 HDX Scraper: Gcf,gcf,HDX,https://github.com/OCHA-DAP/hdx-scraper-gcf,1,0,0,0,0,1,0,0
 HDX Scraper: Glide,glide-initiative,HDX,https://github.com/OCHA-DAP/hdx-scraper-glide,5,5,0,0,0,0,0,0
-HDX Scraper: HAPI Datasets,hdx-hapi,HDX,Unknown,1,0,1,0,1,0,1,0
+HDX Scraper: HAPI Datasets,hdx-hapi,HDX,https://github.com/OCHA-DAP/hdx-hapi-datasets,1,0,1,0,1,0,1,0
 HDX Scraper: HPC HNO,ocha-hpc-tools,HDX,https://github.com/OCHA-DAP/hdx-scraper-hno,1,0,0,0,0,1,0,0
 HDX Scraper: HRP Projects,ocha-hpc-tools,HDX,https://github.com/OCHA-DAP/hdx-scraper-hrp-projects,4,0,0,0,0,0,1,0
 HDX Scraper: Hdro,undp-human-development-reports-office,HDX,https://github.com/OCHA-DAP/hdx-scraper-hdro,8,0,0,0,0,8,8,0
@@ -23,7 +23,7 @@ HDX Scraper: IFRC,ifrc,HDX,https://github.com/OCHA-DAP/hdx-scraper-ifrc,2,0,0,0,
 HDX Scraper: IPC,ipc,HDX,https://github.com/OCHA-DAP/hdx-scraper-ipc,2,2,2,0,0,2,0,0
 HDX Scraper: MIMU GeoNode,mimu,HDX,https://github.com/OCHA-DAP/hdx-scraper-mimu,1,1,0,1,1,0,0,0
 HDX Scraper: OPHI,oxford-poverty-human-development-initiative,HDX,https://github.com/OCHA-DAP/hdx-scraper-ophi,1,1,0,0,0,1,1,0
-HDX Scraper: OurAirports,ourairports,HDX,Unknown,3,3,0,0,3,0,3,0
+HDX Scraper: OurAirports,ourairports,HDX,https://github.com/OCHA-DAP/ourairports-hdx,3,3,0,0,3,0,3,0
 HDX Scraper: Portwatch,portwatch,HDX,https://github.com/OCHA-DAP/hdx-scraper-portwatch,3,0,3,0,0,3,3,0
 HDX Scraper: Ti,transparencyinternational,HDX,https://github.com/OCHA-DAP/hdx-scraper-ti,1,0,0,0,0,0,0,0
 HDX Scraper: UCDP,hdx,HDX,https://github.com/OCHA-DAP/hdx-scraper-ucdp,2,0,2,0,0,2,2,0
